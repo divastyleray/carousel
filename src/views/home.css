@@ -1,28 +1,35 @@
-.App {
+.app {
+  width: 100%;
+}
+.app-header h1{
+  padding: 30px 5% 50px;
+  font-size: 20px;
+  background: #ccc;
+  margin: 0 0 20px;
+  color: #0076a7;
+}
+#carousel {
+  width: 100%;
+  padding: 0;
+  margin: 0;
   text-align: center;
+  overflow: hidden;
+  height: 205px;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+#carousel li {
+  list-style: none;
+  width: 250px;
+  height: 210px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 1%;
 }
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+#carousel li img {
+  width: 100%;
 }
-
-.App-title {
-  font-size: 1.5em;
+.prev-btn{
+  float: left;
 }
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.next-btn{
+  float: right;
 }

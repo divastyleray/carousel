@@ -90,9 +90,15 @@ class Home extends Component {
               })
             }
           </ul>
-          <div className="nav-btn prev-btn" onClick={this.prevImage}>Prev</div>
-          <div className="view-port"></div>
-          <div className="nav-btn next-btn" onClick={this.nextImage}>Next</div>
+        <div className="button-wrapper">
+            <button className="prev-next-button previous" onClick={this.prevImage}>
+              <div className="button-text">Prev</div>
+            </button>
+
+            <button className="prev-next-button next" onClick={this.nextImage}>
+              <div className="button-text">Next</div>
+            </button>
+        </div>
         </div>
       );
     }

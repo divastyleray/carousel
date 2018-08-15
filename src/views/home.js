@@ -35,7 +35,7 @@ class Home extends Component {
   }
 
   prevImage = () => {
-    let {prevCounter, nextCounter, nextFlag} = this.state;
+    let { prevCounter, nextCounter, nextFlag } = this.state;
     const el = document.getElementById("carousel");
     let childIndex;
     
@@ -72,7 +72,7 @@ class Home extends Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <div className="loader"></div>;
     } else {
       return (
         <div className="app">
@@ -84,7 +84,8 @@ class Home extends Component {
               data.hits.map( (item, index) => {
                 return (
                   <li key={index}>
-                    <img src={item.webformatURL} />
+                    <img src={item.webformatURL} alt={item.tags} />
+                    <div class="imgName">Image {index+1}</div>
                   </li>
                 )
               })
@@ -92,11 +93,11 @@ class Home extends Component {
           </ul>
         <div className="button-wrapper">
             <button className="prev-next-button previous" onClick={this.prevImage}>
-              <div className="button-text">Prev</div>
+              <span className="button-text">Prev</span>
             </button>
 
             <button className="prev-next-button next" onClick={this.nextImage}>
-              <div className="button-text">Next</div>
+              <span className="button-text">Next</span>
             </button>
         </div>
         </div>

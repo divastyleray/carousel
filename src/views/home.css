@@ -97,19 +97,20 @@
 
   .prev-next-button {
     border: none;
-    background:url("../images/arrow.svg");
+    background: url(/static/media/arrow.7b439d64.svg);
     background-repeat: no-repeat;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: 50% 0 0 50%;
     outline: none;
-    background-color: #fff;
+    background-color: #ffffffb5;
     background-position: 15px;
+    background-size: 40%;
   }
 
   .previous {
     position: absolute;
-    top: 30%;
+    top: 33%;
     left: 3%;
     transform: rotate(180deg);
     transform-origin: 50% 50%;
@@ -117,7 +118,7 @@
 
   .next {
     position: absolute;
-    top: 30%;
+    top: 33%;
     right: 3%;
   }
 

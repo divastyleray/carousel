@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "./home.css";
+import Header from "../components/header";
+import Carousel from "../components/carousel";
+import Button from "../components/button";
 
 class Home extends Component {
   constructor(props) {
@@ -76,30 +79,12 @@ class Home extends Component {
     } else {
       return (
         <div className="app">
-          <header className="app-header">
-            <h1>Carousel Test</h1>
-          </header>
-          <ul id="carousel">
-            {
-              data.hits.map( (item, index) => {
-                return (
-                  <li key={index}>
-                    <img src={item.webformatURL} alt={item.tags} />
-                    <div class="imgName">Image {index+1}</div>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        <div className="button-wrapper">
-            <button className="prev-next-button previous" onClick={this.prevImage}>
-              <span className="button-text">Prev</span>
-            </button>
-
-            <button className="prev-next-button next" onClick={this.nextImage}>
-              <span className="button-text">Next</span>
-            </button>
-        </div>
+          <Header />
+          <Carousel imagesList={data}/>
+          <div className="button-wrapper">
+            <Button label="Prev" clickFn={this.prevImage} addClass="previous"/>
+            <Button label="Next" clickFn={this.nextImage} addClass="next" />
+          </div>
         </div>
       );
     }

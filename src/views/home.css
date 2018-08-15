@@ -97,7 +97,7 @@
 
   .prev-next-button {
     border: none;
-    background: url(/static/media/arrow.7b439d64.svg);
+    background: url("../images/arrow.svg");
     background-repeat: no-repeat;
     width: 60px;
     height: 60px;
